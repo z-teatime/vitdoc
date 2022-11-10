@@ -31,7 +31,7 @@ export function remarkCodeBlock() {
         // 类型定义
         modules.push(...prevModules, {
           ...node,
-          type: "property-code",
+          type: "card-block",
         });
         prevModules = [];
         return;
@@ -40,7 +40,7 @@ export function remarkCodeBlock() {
       if (node.type === "code" && hasReact(node.value) && isJsx(node.lang)) {
         modules.push({
           ...node,
-          type: "component-block",
+          type: "card-block",
           children: prevModules,
         });
         prevModules = [];

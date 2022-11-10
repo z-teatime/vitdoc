@@ -11,7 +11,6 @@ import { MarkdownArea } from "../../components/markdown-area";
 import { useUnmount } from "ahooks";
 import { propertiesPropsStore, propertiesStore } from "../../store";
 import { useSetAtom } from "jotai";
-import PropertyPane from "../../components/property-pane/property-pane";
 import { PageContainer } from "@ant-design/pro-layout";
 import { LinkCopy } from "../../components/link-copy";
 import { Typography } from "antd";
@@ -66,7 +65,6 @@ export default function ReadmePane() {
                 <MarkdownArea data={Components} />
               </div>
             </div>
-            <PropertyPane />
           </div>
         </PageContainer>
       ) : (
